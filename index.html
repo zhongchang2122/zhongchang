@@ -3,116 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZC Custom | Premium Menswear Customization for USA & Europe</title>
-    <meta name="description" content="ZC Custom by Fuzhou Zhongchang Trading: 10+ years expert apparel manufacturing. High-end fabrics, low MOQ, fast global shipping.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>ZC Custom | Premium Menswear Catalog for Global Brands</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="ZC Custom by Fuzhou Zhongchang Trading: 10+ years of expert apparel customization. High-quality heavyweight T-shirts, hoodies, and tactical jackets for brands in USA & Europe. Low MOQ, fast global shipping.">
+    <meta name="keywords" content="custom clothing manufacturer, wholesale t-shirts bulk, custom hoodies USA, clothing supplier Europe, heavyweight cotton shirts, apparel OEM China, custom tactical jackets">
+    <link rel="canonical" href="https://zhongchang2122.github.io/zhongchang/">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="ZC Custom | Premium Menswear Customization">
+    <meta property="og:description" content="Factory-direct custom apparel for global brands. High-end fabrics, low MOQ, and expert manufacturing.">
+    <meta property="og:url" content="https://zhongchang2122.github.io/zhongchang/">
+    <meta property="og:type" content="website">
+
+    <!-- Structured Data (JSON-LD) for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ClothingStore",
+      "name": "ZC Custom - Fuzhou Zhongchang Trading Co., Ltd.",
+      "description": "Expert apparel customization specializing in heavyweight T-shirts and hoodies for US and European markets.",
+      "url": "https://zhongchang2122.github.io/zhongchang/",
+      "telephone": "+86-13705068186",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "B1-222, Aimolun Business Plaza, No. 136 Chaxiang Road",
+        "addressLocality": "Fuzhou",
+        "addressRegion": "Fujian",
+        "addressCountry": "CN"
+      },
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "sameAs": [
+        "https://zhongchangsm.en.alibaba.com/"
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #1e3a8a; --secondary: #64748b; --accent: #2563eb; --bg: #f8fafc; --text: #0f172a; --white: #ffffff; }
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #64748b;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --text: #0f172a;
+            --white: #ffffff;
+            --light-gray: #f1f5f9;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; scroll-behavior: smooth; }
+        
+        /* Navbar */
         nav { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
         .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .nav-links a { text-decoration: none; color: var(--secondary); margin-left: 1.5rem; font-weight: 500; font-size: 0.9rem; }
+        .nav-links a { text-decoration: none; color: var(--secondary); margin-left: 1.5rem; font-weight: 500; transition: 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
         .cta-btn { background: var(--primary); color: var(--white) !important; padding: 0.7rem 1.2rem; border-radius: 4px; font-size: 0.9rem; }
+
+        /* Hero Section */
         header { height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding: 0 2rem; }
+        header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 700; }
+        header p { font-size: 1.1rem; max-width: 600px; margin-bottom: 2rem; opacity: 0.9; }
+
+        /* Sections */
         section { padding: 4rem 5%; }
         .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 2.5rem; font-weight: 700; color: var(--primary); }
+        .section-subtitle { text-align: center; color: var(--secondary); margin-top: -2rem; margin-bottom: 3rem; font-size: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+        /* High-Density Catalog Grid (Yupoo Style) */
         .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; }
-        .catalog-card { background: var(--white); border-radius: 4px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
-        .catalog-img { height: 260px; background-size: cover; background-position: center; }
+        .catalog-card { background: var(--white); border-radius: 4px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: 0.3s; border: 1px solid #e2e8f0; position: relative; cursor: pointer; }
+        .catalog-card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); border-color: var(--accent); }
+        .catalog-img { height: 260px; background-size: cover; background-position: center; background-color: #f8f9fa; }
         .catalog-content { padding: 1rem; }
-        .catalog-id { font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 0.3rem; }
-        .catalog-card h3 { font-size: 0.9rem; color: var(--text); font-weight: 600; margin-bottom: 0.5rem; }
-        .meta-tag { background: #f1f5f9; color: #475569; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 2px; margin-right: 0.3rem; }
-        .inquiry-container { background: var(--white); max-width: 900px; margin: 0 auto; padding: 3rem; border-radius: 8px; border: 1px solid #edf2f7; }
+        .catalog-id { font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 0.3rem; text-transform: uppercase; }
+        .catalog-card h3 { font-size: 0.95rem; line-height: 1.4; color: var(--text); margin-bottom: 0.5rem; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .catalog-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .meta-tag { background: #f1f5f9; color: #475569; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 2px; font-weight: 500; }
+
+        /* Fabric & Process Tabs (Optional Visual Enhancement) */
+        .tech-tabs { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; }
+        .tech-tab { border: 1px solid #e2e8f0; padding: 0.5rem 1rem; border-radius: 99px; font-size: 0.85rem; color: var(--secondary); cursor: pointer; transition: 0.2s; }
+        .tech-tab.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+        /* Inquiry Form */
+        .inquiry-container { background: var(--white); max-width: 900px; margin: 0 auto; padding: 3rem; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #edf2f7; }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
         .form-group { margin-bottom: 1.2rem; }
-        input, select, textarea { width: 100%; padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 4px; }
-        .submit-btn { background: var(--primary); color: var(--white); padding: 1rem; border: none; width: 100%; border-radius: 4px; font-weight: 700; cursor: pointer; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.85rem; color: var(--text); }
+        input, select, textarea { width: 100%; padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 4px; font-size: 0.95rem; }
+        .submit-btn { background: var(--primary); color: var(--white); padding: 1rem; border: none; width: 100%; border-radius: 4px; font-size: 1rem; cursor: pointer; font-weight: 700; transition: 0.3s; margin-top: 1rem; }
+        .submit-btn:hover { background: var(--accent); }
+
+        /* Footer */
         footer { background: #0f172a; color: var(--white); padding: 4rem 5%; text-align: center; }
         .footer-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; text-align: left; }
+        .footer-logo { font-size: 1.4rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--white); }
+        .footer-info p { opacity: 0.8; margin-bottom: 0.5rem; font-size: 0.9rem; }
+        .social-links { margin-top: 1.5rem; display: flex; gap: 1.5rem; }
+        .social-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; opacity: 0.7; transition: 0.3s; }
+        .social-links a:hover { opacity: 1; color: var(--accent); }
+        .copyright { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.5; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .catalog-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+            .catalog-img { height: 180px; }
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href='#' class='logo'>ZC CUSTOM</a>
-        <div class='nav-links'>
-            <a href='#catalog'>Catalog</a>
-            <a href='#inquiry' class='cta-btn'>Quick Quote</a>
+        <a href="#" class="logo">ZC CUSTOM</a>
+        <div class="nav-links">
+            <a href="#catalog">Catalog</a>
+            <a href="#fabrics">Premium Fabrics</a>
+            <a href="#logistics">USA/EU Delivery</a>
+            <a href="#inquiry" class="cta-btn">Quick Quote</a>
         </div>
     </nav>
+
     <header>
         <h1>Premium Custom Menswear Catalog</h1>
-        <p>10+ Years Factory Experience. Specializing in Streetwear & Heavyweight Tech. Direct to USA & Europe.</p>
-        <a href='#inquiry' class='cta-btn' style='padding: 1rem 2rem; font-size: 1rem; text-decoration: none;'>Inquire About Wholesale</a>
+        <p>10+ Years Factory Experience. Specializing in Streetwear, Vintage Distressed & Heavyweight Tech. Direct Factory to USA & Europe.</p>
+        <a href="#inquiry" class="cta-btn" style="padding: 1rem 2rem; font-size: 1rem; text-decoration: none;">Inquire About Wholesale</a>
     </header>
-    <section id='catalog'>
-        <h2 class='section-title'>New Arrivals & Core Catalog</h2>
-        <div class='catalog-grid'>
-            <div class='catalog-card'>
-                <div class='catalog-img' style='background-image: url("https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=80");'></div>
-                <div class='catalog-content'>
-                    <div class='catalog-id'>Model: 3005#</div>
-                    <h3>230g Heavyweight Pure Cotton Short-Sleeve T-Shirt</h3>
-                    <div><span class='meta-tag'>230g Cotton</span><span class='meta-tag'>Boxy Fit</span></div>
+
+    <section id="catalog">
+        <h2 class="section-title">New Arrivals & Core Catalog</h2>
+        <p class="section-subtitle">High-density catalog grid featuring technical fabrics and professional customization techniques.</p>
+        
+        <div class="tech-tabs">
+            <div class="tech-tab active">All Items</div>
+            <div class="tech-tab">Heavyweight T-Shirts</div>
+            <div class="tech-tab">Washed Hoodies</div>
+            <div class="tech-tab">Tactical Outerwear</div>
+            <div class="tech-tab">Vintage Distressed</div>
+        </div>
+
+        <div class="catalog-grid">
+            <!-- Item 1 -->
+            <div class="catalog-card" onclick="window.location.href='product-detail.html?model=3005%23&title=230g%20Heavyweight%20Pure%20Cotton%20Short-Sleeve%20T-Shirt%20(Oversize%20Fit)&img=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1521572163474-6864f9cf17ab%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80'">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="catalog-content">
+                    <div class="catalog-id">Model: 3005#</div>
+                    <h3>230g Heavyweight Pure Cotton Short-Sleeve T-Shirt (Oversize Fit)</h3>
+                    <div class="catalog-meta">
+                        <span class="meta-tag">230g Cotton</span>
+                        <span class="meta-tag">Silicone Wash</span>
+                        <span class="meta-tag">Reactive Dye</span>
+                    </div>
                 </div>
             </div>
-            <div class='catalog-card'>
-                <div class='catalog-img' style='background-image: url("https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=400&q=80");'></div>
-                <div class='catalog-content'>
-                    <div class='catalog-id'>Model: 4502#</div>
-                    <h3>450g Heavyweight Fleece Hoodie (Vintage Acid Wash)</h3>
-                    <div><span class='meta-tag'>450g Fleece</span><span class='meta-tag'>Acid Wash</span></div>
+            <!-- Item 2 -->
+            <div class="catalog-card" onclick="window.location.href='product-detail.html?model=4502%23&title=450g%20Heavyweight%20Fleece-Lined%20Hoodie%20(Acid%20Wash%20Distressed)&img=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1556821840-3a63f95609a7%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80'">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="catalog-content">
+                    <div class="catalog-id">Model: 4502#</div>
+                    <h3>450g Heavyweight Fleece-Lined Hoodie (Acid Wash Distressed)</h3>
+                    <div class="catalog-meta">
+                        <span class="meta-tag">450g Fleece</span>
+                        <span class="meta-tag">Acid Wash</span>
+                        <span class="meta-tag">Boxy Fit</span>
+                    </div>
                 </div>
             </div>
-            <div class='catalog-card'>
-                <div class='catalog-img' style='background-image: url("https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?auto=format&fit=crop&w=400&q=80");'></div>
-                <div class='catalog-content'>
-                    <div class='catalog-id'>Model: 2208#</div>
-                    <h3>Premium Waffle-Knit Polo Shirt (Anti-Pilling)</h3>
-                    <div><span class='meta-tag'>Waffle</span><span class='meta-tag'>Custom Logo</span></div>
+            <!-- Item 3 -->
+            <div class="catalog-card" onclick="window.location.href='product-detail.html?model=2208%23&title=Premium%20Waffle-Knit%20Polo%20Shirt%20(Breathable%20Anti-Pilling)&img=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1586363104862-3a5e2ab60d99%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80'">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="catalog-content">
+                    <div class="catalog-id">Model: 2208#</div>
+                    <h3>Premium Waffle-Knit Polo Shirt (Breathable Anti-Pilling)</h3>
+                    <div class="catalog-meta">
+                        <span class="meta-tag">Waffle Fabric</span>
+                        <span class="meta-tag">Corporate</span>
+                        <span class="meta-tag">Custom Logo</span>
+                    </div>
                 </div>
             </div>
-            <div class='catalog-card'>
-                <div class='catalog-img' style='background-image: url("https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=400&q=80");'></div>
-                <div class='catalog-content'>
-                    <div class='catalog-id'>Model: 8801#</div>
-                    <h3>Tactical Softshell Windbreaker (Waterproof Tech)</h3>
-                    <div><span class='meta-tag'>Techwear</span><span class='meta-tag'>Outdoor</span></div>
+            <!-- Item 4 -->
+            <div class="catalog-card" onclick="window.location.href='product-detail.html?model=8801%23&title=Tactical%20Softshell%20Windbreaker%20(Waterproof%203-in-1%20Tech)&img=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1591047139829-d91aecb6caea%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80'">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="catalog-content">
+                    <div class="catalog-id">Model: 8801#</div>
+                    <h3>Tactical Softshell Windbreaker (Waterproof 3-in-1 Tech)</h3>
+                    <div class="catalog-meta">
+                        <span class="meta-tag">Techwear</span>
+                        <span class="meta-tag">Waterproof</span>
+                        <span class="meta-tag">Outdoor</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="catalog-card" onclick="window.location.href='product-detail.html?model=3009%23&title=305g%20Ultra-Heavyweight%20Cotton%20Tee%20(Vintage%20Wax%20Dyeing)&img=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1620799140408-edc6dcb6d633%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80'">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="catalog-content">
+                    <div class="catalog-id">Model: 3009#</div>
+                    <h3>305g Ultra-Heavyweight Cotton Tee (Vintage Wax Dyeing)</h3>
+                    <div class="catalog-meta">
+                        <span class="meta-tag">305g Cotton</span>
+                        <span class="meta-tag">Wax Dye</span>
+                        <span class="meta-tag">Raw Edge</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 6 -->
+            <div class="catalog-card" onclick="window.location.href='product-detail.html?model=5506%23&title=Custom%203D%20Embroidery%20Sweatshirt%20(High-Street%20Streetwear)&img=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1574180563860-16d00160601d%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80'">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1574180563860-16d00160601d?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="catalog-content">
+                    <div class="catalog-id">Model: 5506#</div>
+                    <h3>Custom 3D Embroidery Sweatshirt (High-Street Streetwear)</h3>
+                    <div class="catalog-meta">
+                        <span class="meta-tag">3D Embroidery</span>
+                        <span class="meta-tag">Vibe Fit</span>
+                        <span class="meta-tag">Premium</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 7 -->
+            <div class="catalog-card" onclick="window.location.href='product-detail.html?model=1004%23&title=DTG%20Digital%20Print%20T-Shirt%20(Reactive%20Printing%20No-Fade)&img=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1621072156002-e2fcced0b170%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80'">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1621072156002-e2fcced0b170?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="catalog-content">
+                    <div class="catalog-id">Model: 1004#</div>
+                    <h3>DTG Digital Print T-Shirt (Reactive Printing No-Fade)</h3>
+                    <div class="catalog-meta">
+                        <span class="meta-tag">DTG Print</span>
+                        <span class="meta-tag">Full Color</span>
+                        <span class="meta-tag">Wholesale</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 8 -->
+            <div class="catalog-card" onclick="window.location.href='product-detail.html?model=4007%23&title=Slub%20Cotton%20Basic%20Tee%20(Soft%20Touch%20%26%20Natural%20Texture)&img=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1622445275463-afa2ab738c34%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80'">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1622445275463-afa2ab738c34?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="catalog-content">
+                    <div class="catalog-id">Model: 4007#</div>
+                    <h3>Slub Cotton Basic Tee (Soft Touch & Natural Texture)</h3>
+                    <div class="catalog-meta">
+                        <span class="meta-tag">Slub Cotton</span>
+                        <span class="meta-tag">Eco-Friendly</span>
+                        <span class="meta-tag">Minimalist</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://artiemaster.x.yupoo.com/albums?tab=gallery" target="_blank" class="cta-btn" style="background: white; color: var(--primary) !important; border: 1px solid var(--primary);">View Full Archive Gallery</a>
+        </div>
+    </section>
+
+    <section id="fabrics" style="background: white;">
+        <h2 class="section-title">Premium Fabric Standards</h2>
+        <p class="section-subtitle">We use only high-specification materials that meet the strict requirements of US and European retailers.</p>
+        <div class="catalog-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="catalog-card" style="cursor: default;">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="catalog-content">
+                    <div class="catalog-tag" style="background: #ebf4ff; color: #2c5282; padding: 0.2rem 0.6rem; border-radius: 99px; font-size: 0.7rem; font-weight: 700; margin-bottom: 0.5rem; display: inline-block;">Industry Best-Seller</div>
+                    <h3>Heavyweight Pure Cotton (305GSM)</h3>
+                    <p style="font-size: 0.85rem; color: var(--secondary); margin-top: 0.5rem;">Dense weave, zero transparency, and excellent structural integrity for premium boxy silhouettes.</p>
+                </div>
+            </div>
+            <div class="catalog-card" style="cursor: default;">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="catalog-content">
+                    <div class="catalog-tag" style="background: #e6fffa; color: #234e52; padding: 0.2rem 0.6rem; border-radius: 99px; font-size: 0.7rem; font-weight: 700; margin-bottom: 0.5rem; display: inline-block;">Eco-Innovation</div>
+                    <h3>Sorona® Stretch Fiber Mix</h3>
+                    <p style="font-size: 0.85rem; color: var(--secondary); margin-top: 0.5rem;">Superior elasticity, permanent shape retention, and eco-friendly certification (OEKO-TEX).</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id='inquiry'>
-        <h2 class='section-title'>Wholesale Inquiry</h2>
-        <div class='inquiry-container'>
-            <form action='https://formspree.io/f/xvgzovbr' method='POST'>
-                <div class='form-grid'>
-                    <div class='form-group'><input type='text' name='name' placeholder='Your Name' required></div>
-                    <div class='form-group'><input type='email' name='email' placeholder='name@company.com' required></div>
+
+    <section id="inquiry">
+        <h2 class="section-title">Inquire for Wholesale Quote</h2>
+        <div class="inquiry-container">
+            <form id="quoteForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Full Name / Company</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Work Email</label>
+                        <input type="email" placeholder="name@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Category</label>
+                        <select>
+                            <option>Heavyweight T-Shirts</option>
+                            <option>Washed/Distressed Hoodies</option>
+                            <option>Tactical/Outdoor Jackets</option>
+                            <option>Bulk Basic Polos</option>
+                            <option>Custom Mix Order</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Est. Quantity (pcs)</label>
+                        <input type="number" placeholder="Min. 2-10 pcs available">
+                    </div>
                 </div>
-                <div class='form-group'><textarea name='message' rows='4' placeholder='Mention Model # (e.g. 3005#), quantity, and customization needs...'></textarea></div>
-                <button type='submit' class='submit-btn'>Send Inquiry to Vivi</button>
+                <div class="form-group">
+                    <label>Inquiry Details (Model #, Fabric Weight, Logo Style)</label>
+                    <textarea rows="4" placeholder="Mention model numbers (e.g., 3005#) or specific techniques like 'Acid Wash' or '3D Embroidery'..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Inquiry to Vivi</button>
             </form>
         </div>
     </section>
+
     <footer>
-        <div class='footer-content'>
-            <div>
-                <h3>Fuzhou Zhongchang Trading Co., Ltd.</h3>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo">Fuzhou Zhongchang Trading Co., Ltd.</div>
                 <p><strong>Vivi</strong> - Operation Manager</p>
-                <p>Email: zhongchang2122@gmail.com</p>
-                <p>WhatsApp: +86 13705068186</p>
-                <p><a href='https://wa.me/8613705068186' style='color: white;'>Chat on WhatsApp</a></p>
+                <p>Email: <a href="mailto:zhongchang2122@gmail.com" style="color: white; text-decoration: none;">zhongchang2122@gmail.com</a></p>
+                <p>Phone: +86 13705068186 | Office: +86-591-83210882</p>
+                <div class="social-links">
+                    <a href="https://wa.me/8613705068186" target="_blank">WhatsApp Chat</a>
+                    <a href="https://zhongchangsm.en.alibaba.com/" target="_blank">Alibaba Global Store</a>
+                </div>
             </div>
-            <div>
-                <h3>China HQ</h3>
-                <p>Aimolun Business Plaza, Fuzhou, China</p>
-                <p><a href='https://zhongchangsm.en.alibaba.com/' style='color: white;'>View Alibaba Store</a></p>
-                <p><a href='https://artiemaster.x.yupoo.com/' style='color: white;'>View Full Gallery</a></p>
+            <div class="footer-info">
+                <div class="footer-logo" style="font-size: 1.1rem;">China Headquarters</div>
+                <p>B1-222, Aimolun Business Plaza, Jin'an District,</p>
+                <p>Fuzhou City, Fujian Province, China</p>
+                <p style="margin-top: 1rem; opacity: 0.6; font-size: 0.8rem;">DDP Shipping to USA, UK, Germany & France.</p>
             </div>
         </div>
-        <p class='copyright'>&copy; 2026 ZC Custom Apparel. All rights reserved.</p>
+        <div class="copyright">
+            &copy; 2026 Fuzhou Zhongchang Trading Co., Ltd. All rights reserved. | ZC Custom Premium Apparel
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Your wholesale inquiry has been sent to Vivi. Our team will contact you via Email or WhatsApp within 24 hours.');
+        });
+    </script>
 </body>
 </html>
