@@ -1,0 +1,82 @@
+<!-- 请完整复制这段代码到 GitHub 的 index.html 编辑框中 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZC Custom | Fuzhou Zhongchang Trading Co., Ltd.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e3a8a; --secondary: #64748b; --accent: #2563eb; --bg: #f8fafc; --text: #0f172a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        nav { background: #fff; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .nav-links a { text-decoration: none; color: var(--secondary); margin-left: 2rem; font-weight: 500; transition: 0.3s; }
+        .cta-btn { background: var(--primary); color: #fff !important; padding: 0.8rem 1.5rem; border-radius: 5px; }
+        header { height: 80vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 0 2rem; }
+        header h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
+        section { padding: 5rem 5%; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .service-card { background: #fff; padding: 2.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+        .inquiry-container { background: #fff; max-width: 800px; margin: 0 auto; padding: 3rem; border-radius: 10px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 1.5rem; }
+        input, select, textarea { width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 5px; }
+        .submit-btn { background: var(--primary); color: #fff; padding: 1.2rem; border: none; width: 100%; border-radius: 5px; cursor: pointer; font-weight: 700; }
+        footer { background: #0f172a; color: #fff; padding: 4rem 5%; text-align: center; }
+        .footer-content { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; text-align: left; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">ZC CUSTOM</a>
+        <div class="nav-links">
+            <a href="#services">Products</a>
+            <a href="#inquiry" class="cta-btn">Get a Quote</a>
+        </div>
+    </nav>
+    <header>
+        <h1>Professional Apparel Customization</h1>
+        <p>Expert Manufacturing. Low MOQ (2-10pcs). Direct Factory to USA & Europe.</p>
+        <a href="#inquiry" class="cta-btn" style="padding: 1.2rem 2.5rem; font-size: 1.1rem; text-decoration: none;">Start Your Project</a>
+    </header>
+    <section id="services">
+        <h2 class="section-title">Premium Custom Products</h2>
+        <div class="services-grid">
+            <div class="service-card"><h3>T-Shirts</h3><p>180G-305G Heavyweight cotton. Pima & Sorona fabrics.</p></div>
+            <div class="service-card"><h3>Polo Shirts</h3><p>Anti-pilling, breathable. Ideal for corporate branding.</p></div>
+            <div class="service-card"><h3>Hoodies</h3><p>350GSM-450GSM Fleece-lined. Modern oversized cuts.</p></div>
+            <div class="service-card"><h3>Outdoor</h3><p>Waterproof jackets and tactical windbreakers.</p></div>
+        </div>
+    </section>
+    <section id="inquiry">
+        <h2 class="section-title">Inquire for Your Quote</h2>
+        <div class="inquiry-container">
+            <form>
+                <div class="form-group"><input type="text" placeholder="Your Name" required></div>
+                <div class="form-group"><input type="email" placeholder="Work Email" required></div>
+                <div class="form-group"><select><option>T-Shirts</option><option>Polo Shirts</option><option>Hoodies</option><option>Jackets</option></select></div>
+                <div class="form-group"><textarea rows="4" placeholder="Describe your logo or fabric needs..."></textarea></div>
+                <button type="submit" class="submit-btn">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Fuzhou Zhongchang Trading Co., Ltd.</h3>
+                <p><strong>Vivi</strong> - Operation Manager</p>
+                <p>Email: zhongchang2122@gmail.com</p>
+                <p>Phone: +86 13705068186</p>
+                <p><a href="https://wa.me/8613705068186" style="color: #fff;">WhatsApp Vivi Directly</a></p>
+            </div>
+            <div>
+                <h3>Headquarters</h3>
+                <p>Aimolun Business Plaza, No. 136 Chaxiang Road, Fuzhou, China</p>
+                <p><a href="https://zhongchangsm.en.alibaba.com/" style="color: #fff;">Visit Alibaba Store</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
