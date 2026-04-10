@@ -1,82 +1,118 @@
-<!-- 请完整复制这段代码到 GitHub 的 index.html 编辑框中 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZC Custom | Fuzhou Zhongchang Trading Co., Ltd.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>ZC Custom | Premium Menswear Customization for USA & Europe</title>
+    <meta name="description" content="ZC Custom by Fuzhou Zhongchang Trading: 10+ years expert apparel manufacturing. High-end fabrics, low MOQ, fast global shipping.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #1e3a8a; --secondary: #64748b; --accent: #2563eb; --bg: #f8fafc; --text: #0f172a; }
+        :root { --primary: #1e3a8a; --secondary: #64748b; --accent: #2563eb; --bg: #f8fafc; --text: #0f172a; --white: #ffffff; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
-        nav { background: #fff; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .nav-links a { text-decoration: none; color: var(--secondary); margin-left: 2rem; font-weight: 500; transition: 0.3s; }
-        .cta-btn { background: var(--primary); color: #fff !important; padding: 0.8rem 1.5rem; border-radius: 5px; }
-        header { height: 80vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 0 2rem; }
-        header h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
-        section { padding: 5rem 5%; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .service-card { background: #fff; padding: 2.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
-        .inquiry-container { background: #fff; max-width: 800px; margin: 0 auto; padding: 3rem; border-radius: 10px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-        .form-group { margin-bottom: 1.5rem; }
-        input, select, textarea { width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 5px; }
-        .submit-btn { background: var(--primary); color: #fff; padding: 1.2rem; border: none; width: 100%; border-radius: 5px; cursor: pointer; font-weight: 700; }
-        footer { background: #0f172a; color: #fff; padding: 4rem 5%; text-align: center; }
-        .footer-content { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; text-align: left; }
+        nav { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .nav-links a { text-decoration: none; color: var(--secondary); margin-left: 1.5rem; font-weight: 500; font-size: 0.9rem; }
+        .cta-btn { background: var(--primary); color: var(--white) !important; padding: 0.7rem 1.2rem; border-radius: 4px; font-size: 0.9rem; }
+        header { height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding: 0 2rem; }
+        section { padding: 4rem 5%; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 2.5rem; font-weight: 700; color: var(--primary); }
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; }
+        .catalog-card { background: var(--white); border-radius: 4px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+        .catalog-img { height: 260px; background-size: cover; background-position: center; }
+        .catalog-content { padding: 1rem; }
+        .catalog-id { font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 0.3rem; }
+        .catalog-card h3 { font-size: 0.9rem; color: var(--text); font-weight: 600; margin-bottom: 0.5rem; }
+        .meta-tag { background: #f1f5f9; color: #475569; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 2px; margin-right: 0.3rem; }
+        .inquiry-container { background: var(--white); max-width: 900px; margin: 0 auto; padding: 3rem; border-radius: 8px; border: 1px solid #edf2f7; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .form-group { margin-bottom: 1.2rem; }
+        input, select, textarea { width: 100%; padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 4px; }
+        .submit-btn { background: var(--primary); color: var(--white); padding: 1rem; border: none; width: 100%; border-radius: 4px; font-weight: 700; cursor: pointer; }
+        footer { background: #0f172a; color: var(--white); padding: 4rem 5%; text-align: center; }
+        .footer-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; text-align: left; }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#" class="logo">ZC CUSTOM</a>
-        <div class="nav-links">
-            <a href="#services">Products</a>
-            <a href="#inquiry" class="cta-btn">Get a Quote</a>
+        <a href='#' class='logo'>ZC CUSTOM</a>
+        <div class='nav-links'>
+            <a href='#catalog'>Catalog</a>
+            <a href='#inquiry' class='cta-btn'>Quick Quote</a>
         </div>
     </nav>
     <header>
-        <h1>Professional Apparel Customization</h1>
-        <p>Expert Manufacturing. Low MOQ (2-10pcs). Direct Factory to USA & Europe.</p>
-        <a href="#inquiry" class="cta-btn" style="padding: 1.2rem 2.5rem; font-size: 1.1rem; text-decoration: none;">Start Your Project</a>
+        <h1>Premium Custom Menswear Catalog</h1>
+        <p>10+ Years Factory Experience. Specializing in Streetwear & Heavyweight Tech. Direct to USA & Europe.</p>
+        <a href='#inquiry' class='cta-btn' style='padding: 1rem 2rem; font-size: 1rem; text-decoration: none;'>Inquire About Wholesale</a>
     </header>
-    <section id="services">
-        <h2 class="section-title">Premium Custom Products</h2>
-        <div class="services-grid">
-            <div class="service-card"><h3>T-Shirts</h3><p>180G-305G Heavyweight cotton. Pima & Sorona fabrics.</p></div>
-            <div class="service-card"><h3>Polo Shirts</h3><p>Anti-pilling, breathable. Ideal for corporate branding.</p></div>
-            <div class="service-card"><h3>Hoodies</h3><p>350GSM-450GSM Fleece-lined. Modern oversized cuts.</p></div>
-            <div class="service-card"><h3>Outdoor</h3><p>Waterproof jackets and tactical windbreakers.</p></div>
+    <section id='catalog'>
+        <h2 class='section-title'>New Arrivals & Core Catalog</h2>
+        <div class='catalog-grid'>
+            <div class='catalog-card'>
+                <div class='catalog-img' style='background-image: url("https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=80");'></div>
+                <div class='catalog-content'>
+                    <div class='catalog-id'>Model: 3005#</div>
+                    <h3>230g Heavyweight Pure Cotton Short-Sleeve T-Shirt</h3>
+                    <div><span class='meta-tag'>230g Cotton</span><span class='meta-tag'>Boxy Fit</span></div>
+                </div>
+            </div>
+            <div class='catalog-card'>
+                <div class='catalog-img' style='background-image: url("https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=400&q=80");'></div>
+                <div class='catalog-content'>
+                    <div class='catalog-id'>Model: 4502#</div>
+                    <h3>450g Heavyweight Fleece Hoodie (Vintage Acid Wash)</h3>
+                    <div><span class='meta-tag'>450g Fleece</span><span class='meta-tag'>Acid Wash</span></div>
+                </div>
+            </div>
+            <div class='catalog-card'>
+                <div class='catalog-img' style='background-image: url("https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?auto=format&fit=crop&w=400&q=80");'></div>
+                <div class='catalog-content'>
+                    <div class='catalog-id'>Model: 2208#</div>
+                    <h3>Premium Waffle-Knit Polo Shirt (Anti-Pilling)</h3>
+                    <div><span class='meta-tag'>Waffle</span><span class='meta-tag'>Custom Logo</span></div>
+                </div>
+            </div>
+            <div class='catalog-card'>
+                <div class='catalog-img' style='background-image: url("https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=400&q=80");'></div>
+                <div class='catalog-content'>
+                    <div class='catalog-id'>Model: 8801#</div>
+                    <h3>Tactical Softshell Windbreaker (Waterproof Tech)</h3>
+                    <div><span class='meta-tag'>Techwear</span><span class='meta-tag'>Outdoor</span></div>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="inquiry">
-        <h2 class="section-title">Inquire for Your Quote</h2>
-        <div class="inquiry-container">
-            <form>
-                <div class="form-group"><input type="text" placeholder="Your Name" required></div>
-                <div class="form-group"><input type="email" placeholder="Work Email" required></div>
-                <div class="form-group"><select><option>T-Shirts</option><option>Polo Shirts</option><option>Hoodies</option><option>Jackets</option></select></div>
-                <div class="form-group"><textarea rows="4" placeholder="Describe your logo or fabric needs..."></textarea></div>
-                <button type="submit" class="submit-btn">Submit Inquiry</button>
+    <section id='inquiry'>
+        <h2 class='section-title'>Wholesale Inquiry</h2>
+        <div class='inquiry-container'>
+            <form action='https://formspree.io/f/xvgzovbr' method='POST'>
+                <div class='form-grid'>
+                    <div class='form-group'><input type='text' name='name' placeholder='Your Name' required></div>
+                    <div class='form-group'><input type='email' name='email' placeholder='name@company.com' required></div>
+                </div>
+                <div class='form-group'><textarea name='message' rows='4' placeholder='Mention Model # (e.g. 3005#), quantity, and customization needs...'></textarea></div>
+                <button type='submit' class='submit-btn'>Send Inquiry to Vivi</button>
             </form>
         </div>
     </section>
     <footer>
-        <div class="footer-content">
+        <div class='footer-content'>
             <div>
                 <h3>Fuzhou Zhongchang Trading Co., Ltd.</h3>
                 <p><strong>Vivi</strong> - Operation Manager</p>
                 <p>Email: zhongchang2122@gmail.com</p>
-                <p>Phone: +86 13705068186</p>
-                <p><a href="https://wa.me/8613705068186" style="color: #fff;">WhatsApp Vivi Directly</a></p>
+                <p>WhatsApp: +86 13705068186</p>
+                <p><a href='https://wa.me/8613705068186' style='color: white;'>Chat on WhatsApp</a></p>
             </div>
             <div>
-                <h3>Headquarters</h3>
-                <p>Aimolun Business Plaza, No. 136 Chaxiang Road, Fuzhou, China</p>
-                <p><a href="https://zhongchangsm.en.alibaba.com/" style="color: #fff;">Visit Alibaba Store</a></p>
+                <h3>China HQ</h3>
+                <p>Aimolun Business Plaza, Fuzhou, China</p>
+                <p><a href='https://zhongchangsm.en.alibaba.com/' style='color: white;'>View Alibaba Store</a></p>
+                <p><a href='https://artiemaster.x.yupoo.com/' style='color: white;'>View Full Gallery</a></p>
             </div>
         </div>
+        <p class='copyright'>&copy; 2026 ZC Custom Apparel. All rights reserved.</p>
     </footer>
 </body>
 </html>
